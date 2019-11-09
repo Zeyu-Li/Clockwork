@@ -18,10 +18,14 @@ public class Player : MonoBehaviour {
     public float jumpTime;
     private bool isJumping;
 
+    // Animations
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         body2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate() {
@@ -32,6 +36,12 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (body2D.velocity.x != 0) {
+            animator.SetInteger("AnimState", 1);
+        } else {
+
+            animator.SetInteger("AnimState", 0);
+        }
 
         // jump
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
