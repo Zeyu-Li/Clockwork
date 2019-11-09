@@ -13,7 +13,7 @@ outlined in the licence.txt file.
 
 This project is under an MIT licence 
 
-## Programs used:
+## Engine used:
 
  * Unity
 

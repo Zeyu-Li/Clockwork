@@ -32,6 +32,8 @@ public class Player : MonoBehaviour {
     public float transitionDuration = 2.0f;
 
     private SpriteRenderer spriteRenderer;
+    // Animations
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = defaultSprite;
         body2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate() {
@@ -53,6 +56,13 @@ public class Player : MonoBehaviour {
     {
         if (isTransitioning)
             return;
+        
+        if (body2D.velocity.x != 0) {
+            animator.SetInteger("AnimState", 1);
+        } else {
+
+            animator.SetInteger("AnimState", 0);
+        }
 
         // jump
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
