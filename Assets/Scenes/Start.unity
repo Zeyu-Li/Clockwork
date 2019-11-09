@@ -170,6 +170,32 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1855980126886114951}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &63981350
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63981349}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: f2ff20259d90dec4b941e0bc5bd9198e, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 15, y: 15}
+    newSize: {x: 0.15, y: 0.15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 11, y: 15}
+  m_EdgeRadius: 0
 --- !u!114 &63981355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +564,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -4, y: -3, z: 0}
   m_Size: {x: 7, y: 4, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1
@@ -594,12 +620,12 @@ PrefabInstance:
     - target: {fileID: 1855980126914441645, guid: 36d6b6d7c91a0154daa1a62c787ff753,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.7
+      value: -44
       objectReference: {fileID: 0}
     - target: {fileID: 1855980126914441645, guid: 36d6b6d7c91a0154daa1a62c787ff753,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.06
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1855980126914441645, guid: 36d6b6d7c91a0154daa1a62c787ff753,
         type: 3}
@@ -661,5 +687,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1855980126914441633, guid: 36d6b6d7c91a0154daa1a62c787ff753, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 36d6b6d7c91a0154daa1a62c787ff753, type: 3}

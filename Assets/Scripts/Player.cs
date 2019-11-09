@@ -41,12 +41,12 @@ public class Player : MonoBehaviour {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        if (isGrounded == true && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))) {
+        if (isGrounded == true && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))) {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             body2D.velocity = Vector2.up * jumpForce;
         }
-        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && isJumping == true) {
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && isJumping == true) {
             if (jumpTimeCounter > 0) {
                 body2D.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
@@ -57,7 +57,7 @@ public class Player : MonoBehaviour {
 
         }
 
-        if ((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)))
+        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)))
             isJumping = false;
     }
 
