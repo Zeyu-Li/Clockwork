@@ -3,7 +3,7 @@
 
 ## About
 
-This project is a Unity Project for a Game Jam @ MacEwan
+This project is a Unity Project for a Game Jam \@ MacEwan
 It is a plateformer
 
 ## Licence
