@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     private Rigidbody2D body2D;
-    public float speed = 170f;
+    public float speed = 140f;
     private float moveInput;
-    public float jumpForce = 100f;
+    public float jumpForce = 120f;
 
     public bool isGrounded;
     public Transform feetPos;
