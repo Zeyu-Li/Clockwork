@@ -997,6 +997,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorParent
       objectReference: {fileID: 0}
+    - target: {fileID: 6385150563662943405, guid: 45b7bfbacf9854a42a6d0fb04796a71d,
+        type: 3}
+      propertyPath: limitDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6385150563662943404, guid: 45b7bfbacf9854a42a6d0fb04796a71d,
         type: 3}
       propertyPath: m_LocalPosition.x
