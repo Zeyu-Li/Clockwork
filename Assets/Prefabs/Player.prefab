@@ -4951,7 +4951,7 @@ MonoBehaviour:
     m_Bits: 256
   whatIsGroundSoul:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   jumpTime: 0.3
   defaultLayer: 0
   soulLayer: 9
