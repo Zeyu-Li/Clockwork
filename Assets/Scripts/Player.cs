@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
     public Transform feetPos;
     public float checkRadius;
     public LayerMask whatIsGround;
+    public LayerMask whatIsGroundSoul;
 
     private float jumpTimeCounter;
     public float jumpTime;
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour {
         }
 
         // jump
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround | whatIsGroundSoul);
         if (isGrounded)
         {
             soulShiftUsable = true;
