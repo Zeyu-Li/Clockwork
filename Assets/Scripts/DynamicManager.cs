@@ -10,15 +10,21 @@ public class DynamicManager : MonoBehaviour
     public AudioSource audioSource;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        DontDestroyOnLoad(audioSource);
+    }
+
     void Start()
     {
-        player = GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("player").GetComponent<Player>();
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        print(player.isSoulTime);
         if (player.isSoulTime && soul)
         {
             audioSource.mute = false;

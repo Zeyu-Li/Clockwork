@@ -533,8 +533,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139286615}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.80423, y: 18.722174, z: -1446.3828}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 106.80423, y: 18.722168, z: -1446.3828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soul: 1
-  player: {fileID: 0}
+  player: {fileID: 70963406}
   audioSource: {fileID: 1139286616}
 --- !u!82 &1351823194 stripped
 AudioSource:
@@ -1036,7 +1036,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8b41e61ab937fa747b73fbd397d23b99, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1129,8 +1129,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950122885}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.80423, y: 18.722174, z: -1446.3828}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 106.80423, y: 18.722168, z: -1446.3828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soul: 0
-  player: {fileID: 0}
+  player: {fileID: 70963406}
   audioSource: {fileID: 1950122886}
 --- !u!1001 &3000002984249435384
 PrefabInstance:
@@ -1292,6 +1292,11 @@ PrefabInstance:
       propertyPath: audioClip
       value: 
       objectReference: {fileID: 1351823194}
+    - target: {fileID: 4683034707358634202, guid: 79e9e66d0094844438e87a338b3486f5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79e9e66d0094844438e87a338b3486f5, type: 3}
 --- !u!1001 &4826020278563322813
