@@ -17,7 +17,7 @@ public class DynamicManager : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         audioSource = GetComponent<AudioSource>();
     }
 
