@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DynamicManager : MonoBehaviour
 {
-
+    public static DynamicManager instance1;
+    public static DynamicManager instance2;
     public bool soul;
     public Player player;
     public AudioSource audioSource;
@@ -12,7 +13,20 @@ public class DynamicManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        DontDestroyOnLoad(audioSource);
+        if (instance1 is null)
+        {
+            instance1 = this;
+            DontDestroyOnLoad(audioSource);
+        }
+        else if (instance2 is null)
+        {
+            instance2 = this;
+            DontDestroyOnLoad(audioSource);
+        }
+        else if (instance1 != this && instance2 != this)
+        {
+            Destroy(audioSource);
+        }
     }
 
     void Start()
