@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DynamicManager : MonoBehaviour
 {
@@ -25,6 +26,13 @@ public class DynamicManager : MonoBehaviour
         }
         else if (instance1 != this && instance2 != this)
         {
+            Destroy(audioSource);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Title")
+        {
+            instance1 = null;
+            instance2 = null;
             Destroy(audioSource);
         }
     }
@@ -52,6 +60,13 @@ public class DynamicManager : MonoBehaviour
         else
         {
             audioSource.mute = true;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Title")
+        {
+            instance1 = null;
+            instance2 = null;
+            Destroy(audioSource);
         }
     }
 }
