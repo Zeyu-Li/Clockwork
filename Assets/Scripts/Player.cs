@@ -134,16 +134,17 @@ public class Player : MonoBehaviour {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        float yValue = Input.GetAxisRaw("Vertical");
-
-        // prevents soul block jumping glitch
-        if (!(isSoulTime && Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGroundSoul)))
-        {
-            if (isGrounded == true && yValue > 0)
-            {
-                isJumping = true;
-                jumpTimeCounter = jumpTime;
+        if (isGrounded == true && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))) {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            body2D.velocity = Vector2.up * jumpForce;
+        }
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && isJumping == true) {
+            if (jumpTimeCounter > 0) {
                 body2D.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            } else {
+                isJumping = false;
             }
 
 
@@ -151,24 +152,6 @@ public class Player : MonoBehaviour {
 
         if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)))
             isJumping = false;
-            if (yValue > 0 && isJumping == true)
-            {
-                if (jumpTimeCounter > 0)
-                {
-                    body2D.velocity = Vector2.up * jumpForce;
-                    jumpTimeCounter -= Time.deltaTime;
-                }
-                else
-                {
-                    isJumping = false;
-                }
-
-
-            }
-
-            if (Input.GetButtonUp("Vertical"))
-                isJumping = false;
-        }
 
         if (Input.GetButtonDown("ToggleTime") && !isTransitioning)
         {
