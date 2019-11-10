@@ -18,18 +18,23 @@ public class Player : MonoBehaviour {
     private bool isJumping;
 
     [Header("Soul components")]
-    [Tooltip("Check out PHYSICS2D layer")]
+    [Tooltip("Check out Layermask layer")]
     public int defaultLayer = 0;
-    [Tooltip("Check out PHYSICS2D layer")]
-    public int soulLayer = 6;
-    [Tooltip("Check out PHYSICS2D layer")]
-    public int transitionLayer = 7;
+    [Tooltip("Check out Layermask layer")]
+    public int soulLayer = 9;
+    [Tooltip("Check out Layermask layer")]
+    public int transitionLayer = 10;
     public Sprite defaultSprite;
     public Sprite noSoulBodySprite;
     public Transform noSoulBody;
     public bool isSoulTime;
     public bool isTransitioning;
+    private bool soulShiftUsable = true;
     public float transitionDuration = 2.0f;
+    public float movementIgnoreDuration = 1.0f;
+
+    private bool movementConscious;
+    private float movementIgnoreEnd;
 
     private SpriteRenderer spriteRenderer;
     // Animations
@@ -38,6 +43,9 @@ public class Player : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
+        movementIgnoreEnd = 0.0f;
+        movementConscious = true;
+        noSoulBody.gameObject.SetActive(false);
         isSoulTime = false;
         isTransitioning = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -47,7 +55,22 @@ public class Player : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+        if (isTransitioning || Time.time < movementIgnoreEnd)
+        {
+            return;
+        }
+
         moveInput = Input.GetAxis("Horizontal");
+
+        if (!movementConscious && Mathf.Approximately(0.0f, moveInput))
+        {
+            return;
+        }
+        else
+        {
+            movementConscious = true;
+        }
+
         body2D.velocity = new Vector2(moveInput * speed, body2D.velocity.y);
     }
 
@@ -66,6 +89,10 @@ public class Player : MonoBehaviour {
 
         // jump
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        if (isGrounded)
+        {
+            soulShiftUsable = true;
+        }
         if (moveInput > 0) {
             transform.eulerAngles = new Vector3(0, 0, 0);
         } else if (moveInput < 0) {
@@ -98,9 +125,11 @@ public class Player : MonoBehaviour {
                 // push player here
                 gameObject.layer = transitionLayer;
                 StartCoroutine(GoToSoul());
+                isSoulTime = !isSoulTime;
             }
-            else
+            else if (soulShiftUsable)
             {
+                soulShiftUsable = false;
                 // change player sprite
                 spriteRenderer.sprite = noSoulBodySprite;
                 noSoulBody.transform.position = transform.position;
@@ -108,25 +137,29 @@ public class Player : MonoBehaviour {
                 // change physics layer for object
                 gameObject.layer = soulLayer;
                 // move
+                isSoulTime = !isSoulTime;
+                animator.SetBool("IsSoulMode", true);
             }
 
-            isSoulTime = !isSoulTime;
         }
     }
 
     IEnumerator GoToSoul()
     {
+        movementConscious = false;
         isTransitioning = true;
         body2D.isKinematic = true;
         Vector2 startPosition = transform.position;
+        Vector2 endPosition = noSoulBody.position;
+        Vector2 changeVector = endPosition - startPosition;
         float startTime = Time.time;
         float endTime = startTime + transitionDuration;
-        Debug.Log("Our time is " + startTime.ToString() + " vs " + endTime.ToString());
+        movementIgnoreEnd = endTime + movementIgnoreDuration;
 
         while (Time.time < endTime)
         {
             float change = Time.time - startTime;
-            transform.position = Vector2.Lerp(startPosition, noSoulBody.position, change / transitionDuration);
+            transform.position = Vector2.Lerp(startPosition, endPosition, change / transitionDuration);
             yield return new WaitForSeconds(1.0f/60.0f);
         }
 
@@ -140,9 +173,11 @@ public class Player : MonoBehaviour {
         noSoulBody.gameObject.SetActive(false);
         // change physics layer for object
         gameObject.layer = defaultLayer;
+        animator.SetBool("IsSoulMode", false);
 
-        isTransitioning = false;
         body2D.isKinematic = false;
+        body2D.velocity = changeVector * 3f;
+        isTransitioning = false;
         yield return null;
     }
 }
