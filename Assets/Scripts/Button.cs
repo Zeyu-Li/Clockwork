@@ -9,6 +9,7 @@ public class Button : MonoBehaviour
     public Sprite buttonOff;
 
     private SpriteRenderer spriteRenderer;
+    private bool buttonPressed;
 
     private void Start()
     {
@@ -17,6 +18,9 @@ public class Button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (buttonPressed) return;
+        buttonPressed = true;
+
         foreach (Door door in correspondingDoors)
         {
             door.ActivateDoor();
@@ -27,6 +31,8 @@ public class Button : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (!buttonPressed) return;
+        buttonPressed = false;
         spriteRenderer.sprite = buttonOff;
     }
 }
