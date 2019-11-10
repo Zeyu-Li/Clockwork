@@ -39,6 +39,7 @@ public class Player : MonoBehaviour {
     private float movementIgnoreEnd;
 
     private SpriteRenderer spriteRenderer;
+    private ParticleSystem ps;
     // Animations
     private Animator animator;
 
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour {
 
         body2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        ps = GetComponent<ParticleSystem>();
     }
 
     private void FixedUpdate() {
@@ -123,13 +125,16 @@ public class Player : MonoBehaviour {
 
         if (Input.GetButtonDown("ToggleTime") && !isTransitioning)
         {
+
             if (isSoulTime)
             {
                 // push player here
                 StartCoroutine(GoToSoul(true));
+                ps.Stop();
             }
             else if (soulShiftUsable)
             {
+                ps.Play();
                 soulShiftUsable = false;
                 // change player sprite
                 spriteRenderer.sprite = noSoulBodySprite;
