@@ -82,6 +82,11 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Restart"))
+        {
+            RestartLevel();
+        }
+
         if (isTransitioning)
             return;
         
@@ -204,7 +209,12 @@ public class Player : MonoBehaviour {
         else
         {
             // todo: die animation here??
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            RestartLevel();
         }
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
