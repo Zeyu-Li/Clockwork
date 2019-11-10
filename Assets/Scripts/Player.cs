@@ -52,6 +52,7 @@ public class Player : MonoBehaviour {
         isTransitioning = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = defaultSprite;
+
         body2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
