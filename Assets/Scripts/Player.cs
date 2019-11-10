@@ -185,7 +185,7 @@ public class Player : MonoBehaviour {
         body2D.isKinematic = false;
         body2D.velocity = changeVector * 3f;
         isTransitioning = false;
-        isSoulTime = !isSoulTime;
+        isSoulTime = false;
     }
 
     public void Die()
