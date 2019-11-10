@@ -63,14 +63,14 @@ public class DynamicManager : MonoBehaviour
             {
                 audioSource.mute = true;
             }
-        }
 
-        if (SceneManager.GetActiveScene().name == "Title")
-        {
-            instance1 = null;
-            instance2 = null;
-            Destroy(audioSource);
-            Destroy(this);
+            if (SceneManager.GetActiveScene().name == "Title")
+            {
+                instance1 = null;
+                instance2 = null;
+                Destroy(audioSource);
+                Destroy(this);
+            }
         }
     }
 }
