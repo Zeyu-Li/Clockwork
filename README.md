@@ -16,7 +16,7 @@ It is a platformer involving ghosts. You control the player (robot) with the arr
 Joe broke the clock. Now it's your job as a robot mechanic to fix the **Clock of Causality**. 
 Thanks to Joe, the "wibbly-wobbly, timey-wimey stuff" effect of the space-time continuum has caused your robot soul 
 to be seperated from the motherboard, creating a daul version of yourself that is able to interact with things. 
-The **Clock of Causality** upholds the space-time continuum and if you do not fix the clock soon, "everyone dies, the end" - Patrick.
+The **Clock of Causality** upholds the space-time continuum and if you do not fix the clock soon, "everyone dies, the end".
 
 TL;DR
 
