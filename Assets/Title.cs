@@ -30,7 +30,7 @@ public class Title : MonoBehaviour
 
                 if (angle == 0)
                 {
-                    SceneManager.LoadScene("level 1");
+                    SceneManager.LoadScene("Level1");
                 }
             }
             else
