@@ -145,9 +145,11 @@ public class Player : MonoBehaviour {
                 jumpTimeCounter = jumpTime;
                 body2D.velocity = Vector2.up * jumpForce;
             }
+
+
         }
 
-        if (yValue > 0)
+        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)))
             isJumping = false;
             if (yValue > 0 && isJumping == true)
             {
