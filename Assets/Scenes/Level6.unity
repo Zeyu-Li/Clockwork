@@ -450,16 +450,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6783937238327353937, guid: cfe54f9c8c9e93a47952388d85a4783e,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1338314450}
-    - target: {fileID: 6783937238857071696, guid: cfe54f9c8c9e93a47952388d85a4783e,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1338314450}
     - target: {fileID: 6783937238327353938, guid: cfe54f9c8c9e93a47952388d85a4783e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -480,6 +470,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 6783937238327353937, guid: cfe54f9c8c9e93a47952388d85a4783e,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1338314450}
+    - target: {fileID: 6783937238857071696, guid: cfe54f9c8c9e93a47952388d85a4783e,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1338314450}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfe54f9c8c9e93a47952388d85a4783e, type: 3}
 --- !u!4 &370806069 stripped
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47c9bad39d6a74e039e1cc0ad654c8d4, type: 3}
   m_Name: 
@@ -555,7 +555,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 280
+  orthographic size: 240
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
