@@ -27,7 +27,6 @@ public class DynamicManager : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         }
-        print(player.isSoulTime);
         if (player.isSoulTime && soul)
         {
             audioSource.mute = false;

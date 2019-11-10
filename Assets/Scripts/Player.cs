@@ -38,6 +38,10 @@ public class Player : MonoBehaviour {
     private bool movementConscious;
     private float movementIgnoreEnd;
 
+    [Header("Pause component")]
+    private bool isPause;
+    public GameObject pauseCanvas;
+
     private SpriteRenderer spriteRenderer;
     private ParticleSystem ps;
     // Animations
@@ -54,13 +58,16 @@ public class Player : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = defaultSprite;
 
+        isPause = false;
+        pauseCanvas.SetActive(false);
+
         body2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         ps = GetComponent<ParticleSystem>();
     }
 
     private void FixedUpdate() {
-        if (isTransitioning || Time.time < movementIgnoreEnd)
+        if (isTransitioning || Time.time < movementIgnoreEnd || isPause)
         {
             return;
         }
@@ -82,12 +89,30 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Pause"))
+        {
+            // freeze time
+            // show gui
+            // unfreeze time if back
+            if (!isPause)
+            {
+                isPause = true;
+                Time.timeScale = 0.0f;
+                pauseCanvas.SetActive(true);
+            }
+            else
+            {
+                ExitPause();
+            }
+            return;
+        }
+
         if (Input.GetButtonDown("Restart"))
         {
             RestartLevel();
         }
 
-        if (isTransitioning)
+        if (isTransitioning || isPause)
             return;
         
         if (body2D.velocity.x != 0) {
@@ -213,8 +238,16 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private void RestartLevel()
+    public void RestartLevel()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ExitPause()
+    {
+        isPause = false;
+        Time.timeScale = 1.0f;
+        pauseCanvas.SetActive(false);
     }
 }
