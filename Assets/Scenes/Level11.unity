@@ -485,7 +485,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c9bad39d6a74e039e1cc0ad654c8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   scale: 181
+=======
+  scale: 4
+>>>>>>> bc3e7fe6a3e20930dd6dfea4d3702c65d59d16f5
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -868,7 +872,7 @@ GameObject:
   - component: {fileID: 1427325776}
   - component: {fileID: 1427325778}
   - component: {fileID: 1427325779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
