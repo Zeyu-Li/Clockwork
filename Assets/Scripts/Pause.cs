@@ -68,6 +68,11 @@ public class Pause : MonoBehaviour
             angle_change = 2;
         }
 
+        if (index < 0)
+        {
+            index += 3;
+        }
+
         if (angle_change == 1) {
             if (angle_degree < 30)
             {
@@ -102,6 +107,7 @@ public class Pause : MonoBehaviour
     // if you want to implement this, just override this
     public void LoadOption()
     {
+        Debug.Log(index.ToString());
         Time.timeScale = 1.0f;
         switch (Mathf.Abs(index) % 3)
         {

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 7309259254373721710}
   - component: {fileID: 7309259254373721705}
   - component: {fileID: 7309259254373721704}
+  - component: {fileID: 2264506846972892837}
   m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -220,6 +221,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2264506846972892837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309259254373721706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17de3120faaf3874cab0419f37b65897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  obj_selectOptions: {fileID: 7309259254092969564}
+  entire_title: {fileID: 7309259254655431901}
 --- !u!1 &7309259254655431901
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +339,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7309259254821697853}
-  - component: {fileID: 7309259254821697826}
   m_Layer: 5
   m_Name: BigParent
   m_TagString: Untagged
@@ -352,21 +367,6 @@ RectTransform:
   m_AnchoredPosition: {x: -479, y: -4.1000366}
   m_SizeDelta: {x: -820, y: -306}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7309259254821697826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309259254821697852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17de3120faaf3874cab0419f37b65897, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  obj_selectOptions: {fileID: 7309259254092969564}
-  entire_title: {fileID: 7309259254655431901}
 --- !u!1001 &7309259252978090790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -494,6 +494,12 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400364662356470 stripped
@@ -629,6 +635,12 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400364531069924 stripped
@@ -764,6 +776,12 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400364519512189 stripped
@@ -889,6 +907,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Continue (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400364404964385 stripped
@@ -1024,6 +1048,12 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400364480479672 stripped
@@ -1159,6 +1189,12 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400364930909493 stripped
@@ -1294,6 +1330,12 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400364865844734 stripped
@@ -1429,6 +1471,12 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400364849153347 stripped
@@ -1564,6 +1612,12 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400363507621143 stripped
@@ -1689,6 +1743,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Continue (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400363837352561 stripped
@@ -1814,6 +1874,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Continue (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7321400363697613952 stripped
@@ -1939,6 +2005,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Continue
       objectReference: {fileID: 0}
+    - target: {fileID: 69069430048586451, guid: f13930d7b219e1d4fa1485db7f0ed2c5,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13930d7b219e1d4fa1485db7f0ed2c5, type: 3}
 --- !u!224 &7309259254278413170 stripped
