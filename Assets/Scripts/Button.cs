@@ -5,6 +5,15 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public List<Door> correspondingDoors;
+    public Sprite buttonOn;
+    public Sprite buttonOff;
+
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,5 +21,12 @@ public class Button : MonoBehaviour
         {
             door.ActivateDoor();
         }
+
+        spriteRenderer.sprite = buttonOn;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        spriteRenderer.sprite = buttonOff;
     }
 }
