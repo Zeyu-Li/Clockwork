@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6385150563662943404}
   - component: {fileID: 6385150563662943405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDoorLocked: 1
+  isTimeLimited: 0
+  limitDuration: 3
 --- !u!1 &6385150563764854759
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +58,7 @@ GameObject:
   - component: {fileID: 6385150563764854756}
   - component: {fileID: 6385150563764854757}
   - component: {fileID: 5042609019079920322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
