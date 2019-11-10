@@ -5,6 +5,8 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public bool isDoorLocked = true;
+    public bool isTimeLimited = false;
+    public float limitDuration = 3.0f;
 
     private void Start()
     {
@@ -13,8 +15,10 @@ public class Door : MonoBehaviour
 
     public void ActivateDoor()
     {
+        StopAllCoroutines();
         isDoorLocked = !isDoorLocked;
         UpdateDoorLock();
+        StartCoroutine(TimeLimit());
     }
 
     private void UpdateDoorLock()
@@ -23,5 +27,15 @@ public class Door : MonoBehaviour
         {
             child.gameObject.SetActive(isDoorLocked);
         }
+    }
+
+    IEnumerator TimeLimit()
+    {
+        yield return new WaitForSeconds(limitDuration);
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+        Debug.Log("Finish");
     }
 }
