@@ -14,7 +14,7 @@ It is a platformer involving ghosts. You control the player (robot) with the arr
 
 # TODO
 
-- [ ] NullRef Error (I think it has to do with changing scenes)
+- [ ] NullRef Error (I think it has to do with changing scenes) (https://stackoverflow.com/questions/37764032/unity-5-nullreferenceexception-after-loading-new-scene)
 - [ ] Finish Levels
 - [ ] Change camera
 - [ ] Collect clock sound (it cuts out b/c scene switch maybe?)
