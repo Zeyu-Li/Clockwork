@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour {
 
 	void Update(){
 		var cam = GetComponent<Camera> ();
-		cam.orthographicSize = (Screen.height / 2f) / scale;
+		cam.orthographicSize = scale;
 	}
 
 	// Use this for initialization

@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c9bad39d6a74e039e1cc0ad654c8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 1
+  scale: 156.31
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -8170,6 +8170,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 890894181}
     m_Modifications:
+    - target: {fileID: 2214901158031703812, guid: 632224fbcfad17d4d96b6f0f95b3f90f,
+        type: 3}
+      propertyPath: m_Name
+      value: getKey
+      objectReference: {fileID: 0}
     - target: {fileID: 2909057183839485426, guid: 632224fbcfad17d4d96b6f0f95b3f90f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8225,11 +8230,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2214901158031703812, guid: 632224fbcfad17d4d96b6f0f95b3f90f,
-        type: 3}
-      propertyPath: m_Name
-      value: getKey
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632224fbcfad17d4d96b6f0f95b3f90f, type: 3}
 --- !u!1001 &6385150565361784895
@@ -8243,6 +8243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385150563662943405, guid: 45b7bfbacf9854a42a6d0fb04796a71d,
+        type: 3}
+      propertyPath: limitDuration
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6385150563662943404, guid: 45b7bfbacf9854a42a6d0fb04796a71d,
         type: 3}
@@ -8298,11 +8303,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6385150563662943405, guid: 45b7bfbacf9854a42a6d0fb04796a71d,
-        type: 3}
-      propertyPath: limitDuration
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6385150563764854756, guid: 45b7bfbacf9854a42a6d0fb04796a71d,
         type: 3}
