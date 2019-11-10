@@ -13,7 +13,7 @@ public class MovingObjectController : MonoBehaviour
     public float minDistanceForChange = 0.1f;
 
     private int currentIndex = 0;
-    private bool isStopped = false;
+    public bool isStopped = false;
 
     private void Start()
     {
