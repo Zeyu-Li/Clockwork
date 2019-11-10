@@ -18,6 +18,7 @@ public class SaveData : ScriptableObject
         if (currentLevel > 12)
         {
             Debug.Log("You finish the game!");
+            SceneManager.LoadScene(0);
         }
         else
         {
