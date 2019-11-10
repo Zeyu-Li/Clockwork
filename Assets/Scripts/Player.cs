@@ -213,8 +213,13 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private void RestartLevel()
+    public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ExitPause()
+    {
+
     }
 }
