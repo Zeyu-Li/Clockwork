@@ -58,21 +58,27 @@ public class Pause : MonoBehaviour
         //    entire_title.GetComponent<RectTransform>().position = new Vector2(entire_title.GetComponent<RectTransform>().position.x - timer, entire_title.GetComponent<RectTransform>().position.y);
         //}
 
-        float yValue = Input.GetAxisRaw("Vertical");
+        if (angle_change == 0)
+        {
+            float yValue = Input.GetAxisRaw("Vertical");
 
-        if (yValue > 0) 
-        {
-            index--;
-            angle_change = 1; 
-        } else if (yValue < 0)
-        {
-            index++;
-            angle_change = 2;
-        }
+            if (yValue > 0)
+            {
+                index--;
+                angle_change = 1;
+            }
+            else if (yValue < 0)
+            {
+                index++;
+                angle_change = 2;
+            }
 
-        if (index < 0)
-        {
-            index += 3;
+            if (index < 0)
+            {
+                index += 3;
+            }
+
+            Debug.Log("New value: " + index.ToString());
         }
 
         if (angle_change == 1) {
@@ -109,7 +115,7 @@ public class Pause : MonoBehaviour
     // if you want to implement this, just override this
     public void LoadOption()
     {
-        Debug.Log(index.ToString());
+        Debug.Log("Our index: " + index.ToString());
         Time.timeScale = 1.0f;
         switch (Mathf.Abs(index) % 3)
         {
