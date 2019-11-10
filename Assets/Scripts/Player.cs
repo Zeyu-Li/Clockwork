@@ -198,6 +198,7 @@ public class Player : MonoBehaviour {
     {
         if (isSoulTime)
         {
+            ps.Stop();
             StartCoroutine(GoToSoul(false));
         }
         else

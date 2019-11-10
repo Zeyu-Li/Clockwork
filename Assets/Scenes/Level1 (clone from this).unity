@@ -197,7 +197,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &70963406 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1855980126914441644, guid: 5a3f2c9de2e386d49b27432409e6e04c,
+  m_CorrespondingSourceObject: {fileID: 2429736737705352918, guid: 5a3f2c9de2e386d49b27432409e6e04c,
     type: 3}
   m_PrefabInstance: {fileID: 385757277}
   m_PrefabAsset: {fileID: 0}
@@ -375,8 +375,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4069543940336904273, guid: 5a3f2c9de2e386d49b27432409e6e04c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3f2c9de2e386d49b27432409e6e04c, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -557,7 +556,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 79.5, y: 79.5, z: 0}
   m_MaxChunkCount: 16

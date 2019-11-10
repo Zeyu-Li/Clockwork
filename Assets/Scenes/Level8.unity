@@ -710,7 +710,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 79.5, y: 79.5, z: 0}
   m_MaxChunkCount: 16
@@ -1759,7 +1759,7 @@ PrefabInstance:
     - target: {fileID: 4069543941759180138, guid: 5a3f2c9de2e386d49b27432409e6e04c,
         type: 3}
       propertyPath: m_Name
-      value: PlayerDuo (1)
+      value: PlayerDuo
       objectReference: {fileID: 0}
     - target: {fileID: 4069543941759180139, guid: 5a3f2c9de2e386d49b27432409e6e04c,
         type: 3}
@@ -1816,11 +1816,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1855980126914441644, guid: 5a3f2c9de2e386d49b27432409e6e04c,
-        type: 3}
-      propertyPath: whatIsGroundSoul.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4069543940336904273, guid: 5a3f2c9de2e386d49b27432409e6e04c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3f2c9de2e386d49b27432409e6e04c, type: 3}

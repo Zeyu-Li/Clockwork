@@ -180,11 +180,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4069543940336904273, guid: 36d6b6d7c91a0154daa1a62c787ff753,
-        type: 3}
+    - target: {fileID: 63981359, guid: 36d6b6d7c91a0154daa1a62c787ff753, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 63981355, guid: 36d6b6d7c91a0154daa1a62c787ff753, type: 3}
       propertyPath: noSoulBody
       value: 
       objectReference: {fileID: 4069543941820570962}
+    - target: {fileID: 63981351, guid: 36d6b6d7c91a0154daa1a62c787ff753, type: 3}
+      propertyPath: simulationSpeed
+      value: 3.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 63981351, guid: 36d6b6d7c91a0154daa1a62c787ff753, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855980126914441647, guid: 36d6b6d7c91a0154daa1a62c787ff753,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36d6b6d7c91a0154daa1a62c787ff753, type: 3}
 --- !u!4 &4069543940336904272 stripped
