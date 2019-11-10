@@ -9,7 +9,7 @@ Topic: Clockwork
 
 ## Description
 
-![Alt text](Title.png "Title")
+![Alt text](screenshot/Title.png "Title")
 
 It is a platformer involving ghosts. You control the player (robot) with the arrow keys or the a, d, w keys. 
 
