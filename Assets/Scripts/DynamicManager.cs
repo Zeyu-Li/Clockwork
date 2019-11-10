@@ -45,21 +45,24 @@ public class DynamicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player is null)
+        if (!(audioSource is null))
         {
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        }
-        if (player.isSoulTime && soul)
-        {
-            audioSource.mute = false;
-        }
-        else if (!player.isSoulTime && !soul)
-        {
-            audioSource.mute = false;
-        }
-        else
-        {
-            audioSource.mute = true;
+            if (player is null)
+            {
+                player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            }
+            if (player.isSoulTime && soul)
+            {
+                audioSource.mute = false;
+            }
+            else if (!player.isSoulTime && !soul)
+            {
+                audioSource.mute = false;
+            }
+            else
+            {
+                audioSource.mute = true;
+            }
         }
 
         if (SceneManager.GetActiveScene().name == "Title")
@@ -67,6 +70,7 @@ public class DynamicManager : MonoBehaviour
             instance1 = null;
             instance2 = null;
             Destroy(audioSource);
+            Destroy(this);
         }
     }
 }
