@@ -23,7 +23,7 @@ public class DetailMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.isSoulTime)
+        if (player != null && player.isSoulTime)
         {
             rb.freezeRotation = true;
             hinge.useMotor = false;

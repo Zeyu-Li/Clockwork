@@ -58,11 +58,13 @@ public class Pause : MonoBehaviour
         //    entire_title.GetComponent<RectTransform>().position = new Vector2(entire_title.GetComponent<RectTransform>().position.x - timer, entire_title.GetComponent<RectTransform>().position.y);
         //}
 
-        if (Input.GetKeyUp(KeyCode.UpArrow)) 
+        float yValue = Input.GetAxisRaw("Vertical");
+
+        if (yValue > 0) 
         {
             index--;
             angle_change = 1; 
-        } else if (Input.GetKeyUp(KeyCode.DownArrow))
+        } else if (yValue < 0)
         {
             index++;
             angle_change = 2;

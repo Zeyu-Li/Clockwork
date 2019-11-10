@@ -134,12 +134,14 @@ public class Player : MonoBehaviour {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        if (isGrounded == true && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))) {
+        float yValue = Input.GetAxisRaw("Vertical");
+
+        if (isGrounded == true && yValue > 0) {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             body2D.velocity = Vector2.up * jumpForce;
         }
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && isJumping == true) {
+        if (yValue > 0 && isJumping == true) {
             if (jumpTimeCounter > 0) {
                 body2D.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;

@@ -7,6 +7,7 @@ public class Title : MonoBehaviour
 {
     public GameObject obj_selectOptions;
     public GameObject entire_title;
+    public GameObject Fancies; 
 
     private int timer = 0;
     private bool move = false;
@@ -42,6 +43,7 @@ public class Title : MonoBehaviour
         if (move == true && timer < 25)
         {
             timer += 1;
+            Fancies.SetActive(false);
             obj_selectOptions.SetActive(true);
             entire_title.GetComponent<RectTransform>().position = new Vector2(entire_title.GetComponent<RectTransform>().position.x - timer, entire_title.GetComponent<RectTransform>().position.y);
         }
