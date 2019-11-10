@@ -59,7 +59,7 @@ public class Title : MonoBehaviour
             {
                 angle_degree -= 2;
                 Quaternion target = Quaternion.Euler(0, 0, angle + angle_degree);
-                obj_selectOptions.GetComponent<RectTransform>().rotation = target;
+                obj_selectOptions.GetComponent<RectTransform>().rotation = target; 
             }
             else
             {
