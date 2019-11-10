@@ -36,6 +36,5 @@ public class Door : MonoBehaviour
         {
             child.gameObject.SetActive(true);
         }
-        Debug.Log("Finish");
     }
 }
