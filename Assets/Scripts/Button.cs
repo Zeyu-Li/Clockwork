@@ -7,6 +7,7 @@ public class Button : MonoBehaviour
     public List<Door> correspondingDoors;
     public Sprite buttonOn;
     public Sprite buttonOff;
+    public AudioSource audioClip;
 
     private SpriteRenderer spriteRenderer;
     private bool buttonPressed;
@@ -24,6 +25,7 @@ public class Button : MonoBehaviour
         foreach (Door door in correspondingDoors)
         {
             door.ActivateDoor();
+            audioClip.Play();
         }
 
         spriteRenderer.sprite = buttonOn;
