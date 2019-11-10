@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
     private Rigidbody2D body2D;
@@ -123,9 +124,7 @@ public class Player : MonoBehaviour {
             if (isSoulTime)
             {
                 // push player here
-                gameObject.layer = transitionLayer;
-                StartCoroutine(GoToSoul());
-                isSoulTime = !isSoulTime;
+                StartCoroutine(GoToSoul(true));
             }
             else if (soulShiftUsable)
             {
@@ -144,14 +143,21 @@ public class Player : MonoBehaviour {
         }
     }
 
-    IEnumerator GoToSoul()
+    IEnumerator GoToSoul(bool isDefault)
     {
+        gameObject.layer = transitionLayer;
         movementConscious = false;
         isTransitioning = true;
         body2D.isKinematic = true;
         Vector2 startPosition = transform.position;
         Vector2 endPosition = noSoulBody.position;
         Vector2 changeVector = endPosition - startPosition;
+
+        if (!isDefault)
+        {
+            changeVector = Vector2.zero;
+        }
+
         float startTime = Time.time;
         float endTime = startTime + transitionDuration;
         movementIgnoreEnd = endTime + movementIgnoreDuration;
@@ -178,6 +184,19 @@ public class Player : MonoBehaviour {
         body2D.isKinematic = false;
         body2D.velocity = changeVector * 3f;
         isTransitioning = false;
-        yield return null;
+        isSoulTime = !isSoulTime;
+    }
+
+    public void Die()
+    {
+        if (isSoulTime)
+        {
+            StartCoroutine(GoToSoul(false));
+        }
+        else
+        {
+            // todo: die animation here??
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
