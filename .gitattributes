@@ -1,6 +1,11 @@
 * linguist-vendored
 *.cs linguist-vendored=false
 
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+
 # Unity
 *.cginc              text
 *.cs                 text diff=csharp
